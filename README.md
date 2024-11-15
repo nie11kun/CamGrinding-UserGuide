@@ -1,10 +1,10 @@
-# CamGrinding User Guide
+# Cam Grinding 用户指南
 
-欢迎使用 CamGrinding 用户指南。本指南将帮助您了解和使用 CamGrinding 软件的所有功能。
+欢迎使用 Cam Grinding 用户指南。本指南将帮助您了解和使用 Cam Grinding 软件的所有功能。
 
 ## 概述
 
-CamGrinding 是一款专业的...（在此描述软件的主要功能和用途）
+Cam Grinding 是一款专业的...（在此描述软件的主要功能和用途）
 
 ## 使用本指南
 

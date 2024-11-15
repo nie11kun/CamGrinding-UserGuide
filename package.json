@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "gitbook-plugin-anchors": "^0.7.1",
-    "gitbook-plugin-pageview-count": "^1.0.1"
-  }
-}

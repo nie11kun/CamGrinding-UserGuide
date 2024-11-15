@@ -1,10 +1,9 @@
 {
-    "title": "CamGrinding 用户使用指南",
+    "title": "Cam Grinding User Guide",
     "author": "Nie Kun",
-    "description": "CamGrinding 软件完整用户指南",
+    "description": "Cam Grinding 软件完整用户指南",
     "language": "zh-hans",
     "plugins": [
-        "fontsettings",
         "theme-default"
     ],
     "pluginsConfig": {
