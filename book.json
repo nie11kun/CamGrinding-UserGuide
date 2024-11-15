@@ -1,0 +1,11 @@
+{
+    "title": "CamGrinding User Guide",
+    "author": "Marco Nie",
+    "language": "zh-hans",
+    "plugins": [
+        "search",
+        "highlight",
+        "-sharing",
+        "expandable-chapters"
+    ]
+}

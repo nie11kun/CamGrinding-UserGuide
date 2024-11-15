@@ -1,0 +1,17 @@
+{
+  "name": "camgrinding-userguide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-search": "^2.2.1"
+  }
+}
