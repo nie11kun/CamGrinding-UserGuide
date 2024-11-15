@@ -1,11 +1,23 @@
 {
-    "title": "CamGrinding User Guide",
-    "author": "Marco Nie",
+    "title": "CamGrinding 用户使用指南",
+    "author": "Nie Kun",
+    "description": "CamGrinding 软件完整用户指南",
     "language": "zh-hans",
     "plugins": [
-        "search",
-        "highlight",
-        "-sharing",
-        "expandable-chapters"
-    ]
+        "fontsettings",
+        "theme-default"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "serif",
+            "size": 2
+        }
+    },
+    "styles": {
+        "website": "styles/website.css"
+    }
 }
