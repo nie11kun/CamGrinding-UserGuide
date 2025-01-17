@@ -1,0 +1,15 @@
+{
+  "name": "camgrinding-userguide",
+  "version": "1.0.0",
+  "description": "欢迎使用 Cam Grinding 凸轮加工软件平台用户指南！本指南旨在帮助您全面了解并掌握 Cam Grinding 的功能，为凸轮加工提供高效、精准的支持。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "honkit": "^6.0.2"
+  }
+}
