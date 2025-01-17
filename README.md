@@ -63,10 +63,10 @@ Cam Grinding 是一款专为凸轮加工设计的专业软件，集成了以下�
    **邮箱**：[me@niekun.net](mailto:me@niekun.net)
 
 2. **在线文档**  
-   浏览完整的在线用户文档：[https://cg.niekun.net/docs](https://cg.niekun.net/docs)
+   浏览完整的在线用户文档：[https://cg-manual.niekun.net/](https://cg-manual.niekun.net/)
 
 3. **常见问题 (FAQ)**  
-   查看常见问题解答：[https://cg.niekun.net/faq](https://cg.niekun.net/faq)
+   查看常见问题解答：[https://cg-manual.niekun.net/troubleshooting](https://cg-manual.niekun.net/troubleshooting)
 
 ---
 
