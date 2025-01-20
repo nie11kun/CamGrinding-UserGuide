@@ -1,4 +1,4 @@
-# Summary
+# 摘要
 
 * [介绍](README.md)
 * [快速开始](getting_started/README.md)
@@ -18,10 +18,10 @@
     * [升程转凸轮](cam_analysis/lift2cam.md)
     * [速度转升程](cam_analysis/velocity2lift.md)
 * [误差补偿](deviation/README.md)
-    * [加工误差修正](deviation/deviation_fix.md)
     * [直径误差分析](deviation/deviation_analysis.md)
     * [CAM误差叠加](deviation/deviation_add.md)
     * [CAM误差对比](deviation/deviation_compare.md)
+    * [加工误差修正](deviation/deviation_fix.md)
 * [其他工具](dxf_tools/README.md)
     * [DXF对比](dxf_tools/dxf_compare.md)
     * [DXF离散化](dxf_tools/dxf_discretize.md)
