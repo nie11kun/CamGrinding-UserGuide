@@ -8,6 +8,7 @@
 * [代码生成](genaration/README.md)
     * [基本参数](genaration/base.md)
     * [高级参数](genaration/advance.md)
+    * [坐标转换](genaration/transmit.md)
 * [凸轮绘制](cam_drawing/README.md)
     * [XY点位文件](cam_drawing/xypoints.md)
     * [CAM数据文件](cam_drawing/camdatafile.md)

@@ -21,26 +21,19 @@
 
 本指南分为以下部分，方便您快速查找信息：
 
-1. [快速开始](getting_started/README.md)  
-   了解软件基本功能和界面，快速熟悉操作流程。
+1. [快速开始](getting_started/README.md): 了解软件基本功能和界面，快速熟悉操作流程。
 
-2. [代码生成](generation/README.md)  
-   学习如何根据参数生成加工代码，并导出适配不同设备的文件。
+2. [代码生成](generation/README.md): 学习如何根据参数生成加工代码，并导出适配不同设备的文件。
 
-3. [凸轮绘制](cam_drawing/README.md)  
-   掌握 CAD 绘图功能，用于凸轮设计与可视化。
+3. [凸轮绘制](cam_drawing/README.md): 掌握 CAD 绘图功能，用于凸轮设计与可视化。
 
-4. [曲线分析](cam_analysis/README.md)  
-   了解如何分析曲线数据，进行优化与评估。
+4. [曲线分析](cam_analysis/README.md): 了解如何分析曲线数据，进行优化与评估。
 
-5. [误差补偿](deviation/README.md)  
-   探索误差补偿工具，最大限度提升加工精度。
+5. [误差补偿](deviation/README.md): 探索误差补偿工具，最大限度提升加工精度。
 
-6. [其他工具](dxf_tools/README.md)  
-   介绍软件附带的实用工具，如 DXF 文件处理等。
+6. [其他工具](dxf_tools/README.md): 介绍软件附带的实用工具，如 DXF 文件处理等。
 
-7. [故障排除](troubleshooting/README.md)  
-   提供常见问题解决方案，帮助您快速排除障碍。
+7. [故障排除](troubleshooting/README.md): 提供常见问题解决方案，帮助您快速排除障碍。
 
 ---
 
