@@ -16,6 +16,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
@@ -36,6 +40,8 @@
         <link rel="stylesheet" href="../styles/website.css">
         
     
+        
+    
 
         
     
@@ -48,7 +54,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../cam_drawing/" />
+    <link rel="next" href="transmit.html" />
     
     
     <link rel="prev" href="base.html" />
@@ -200,6 +206,21 @@
                         <b>1.3.2.</b>
                     
                     高级参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="transmit.html">
+            
+                <a href="transmit.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    坐标转换
             
                 </a>
             
@@ -551,7 +572,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>1</p>
+                                <h1 id="高级参数">高级参数</h1>
+<p>高级参数提供了更多的自定义选项，用户可根据实际需求调整这些参数，以优化加工效果并提升加工精度。</p>
+<h2 id="程序头信息">程序头信息</h2>
+<p>在生成的加工代码文件中，用户可以在程序头部添加自定义信息，例如该程序所对应的凸轮信息，如升程、基圆半径等，以便于后续的加工和管理。</p>
+<p>示例如下：</p>
+<p><img src="resources/prg_header.jpg" alt="程序头信息示例"></img></p>
+<p>实际加工代码中的效果如下：</p>
+<pre><code>;凸轮名称：389
+;基圆半径：42mm
+;升程：25mm
+;********************************
+;砂轮直径范围:396.3000 - 395.3000
+;砂轮步距:0.5
+;轨迹程序段数:106
+;********************************
+;软件版本:1.11.0
+;生成日期:2025-01-20 11:26:42
+;********************************
+...
+</code></pre><h2 id="dxf-读取精度">DXF 读取精度</h2>
+<p>DXF 读取精度参数用于设置凸轮 DXF 文件的离散精度，定义原始凸轮曲线离散化后相邻离散点之间的最大距离。设置值越小，对凸轮曲线的识别精度越高，建议设置为 0.005mm，即可满足大多数加工精度要求。</p>
+<h2 id="程序点数量">程序点数量</h2>
+<p>该参数定义生成加工代码时所使用的离散点数量，每个点均由 X、C 两个轴的坐标构成。点的数量越多，加工精度越高，但也会导致代码文件体积增大，程序运行速度降低。默认设置为 3600 个点，通常能够满足加工需求。</p>
+<p>示例如下：</p>
+<pre><code>X=0.0015 C=DC(0.3525)
+</code></pre><p>建议优先使用 <strong>圆弧拟合</strong> 方法以减少点数，提高执行效率。</p>
+<h2 id="拟合圆弧">拟合圆弧</h2>
+<p>圆弧拟合功能可显著减少代码行数，提高执行效率。启用此功能后，系统将使用最小二乘法算法对加工离散点进行圆弧拟合，从而优化加工轨迹。</p>
+<p>使用圆弧拟合功能时，需要机床开启 Transmit 坐标转换功能并设置相关系统参数。Siemens sinumerik 数控系统开启 Transmit 功能请参考 <a href="transmit.html">TRANSMIT</a>。</p>
+<p>启用后，生成的代码示例如下：</p>
+<pre><code>G02 X=247.2834 Y=-4.9551 CR=404.1318
+</code></pre><p>若机床的几何轴顺序与标准 XYZ 不一致，可能需要启用 G3/G2 反转选项。</p>
+<h2 id="拟合误差">拟合误差</h2>
+<p>拟合误差参数用于控制圆弧拟合的精度。设置值越小，拟合结果越接近原始离散点曲线，精度越高，但同时会增加圆弧段的数量。通常情况下，建议将该参数设置为 1，以达到精度与效率的平衡。</p>
 
                                 
                                 </section>
@@ -584,7 +638,7 @@
                 </a>
                 
                 
-                <a href="../cam_drawing/" class="navigation navigation-next " aria-label="Next page: 凸轮绘制">
+                <a href="transmit.html" class="navigation navigation-next " aria-label="Next page: 坐标转换">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -595,7 +649,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"高级参数","level":"1.3.2","depth":2,"next":{"title":"凸轮绘制","level":"1.4","depth":1,"path":"cam_drawing/README.md","ref":"cam_drawing/README.md","articles":[{"title":"XY点位文件","level":"1.4.1","depth":2,"path":"cam_drawing/xypoints.md","ref":"cam_drawing/xypoints.md","articles":[]},{"title":"CAM数据文件","level":"1.4.2","depth":2,"path":"cam_drawing/camdatafile.md","ref":"cam_drawing/camdatafile.md","articles":[]},{"title":"CAM图形变换","level":"1.4.3","depth":2,"path":"cam_drawing/camtransform.md","ref":"cam_drawing/camtransform.md","articles":[]}]},"previous":{"title":"基本参数","level":"1.3.1","depth":2,"path":"genaration/base.md","ref":"genaration/base.md","articles":[]},"dir":"neutral"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"fontsettings":{"theme":"white","family":"serif","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"genaration/advance.md","mtime":"2025-01-17T09:28:37.531Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-17T09:28:45.699Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"高级参数","level":"1.3.2","depth":2,"next":{"title":"坐标转换","level":"1.3.3","depth":2,"path":"genaration/transmit.md","ref":"genaration/transmit.md","articles":[]},"previous":{"title":"基本参数","level":"1.3.1","depth":2,"path":"genaration/base.md","ref":"genaration/base.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"fontsettings":{"theme":"white","family":"serif","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"genaration/advance.md","mtime":"2025-01-20T03:53:44.175Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-20T03:53:49.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -647,6 +701,10 @@
     </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
