@@ -4,7 +4,8 @@
     "description": "Cam Grinding 软件完整用户指南",
     "language": "zh-hans",
     "plugins": [
-        "theme-default"
+        "theme-default",
+        "fontsettings"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -17,6 +18,7 @@
         }
     },
     "styles": {
-        "website": "styles/website.css"
+        "website": "styles/website.css",
+        "pdf": "styles/pdf.css"
     }
 }
