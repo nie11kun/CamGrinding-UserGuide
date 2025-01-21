@@ -568,7 +568,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>1</p>
+                                <h1 id="误差补偿">误差补偿</h1>
+<p>误差补偿是凸轮加工过程中的关键步骤。在实际加工中，由于设备精度、材料特性、温度变化以及人为因素等影响，可能会产生偏差，导致凸轮轮廓与设计预期不符。这些误差如果得不到有效控制，可能会影响机械系统的整体性能，甚至导致设备运行故障。</p>
+<p><img src="resources/deviation_demo.jpg" alt="img"></img></p>
+<h2 id="误差来源">误差来源</h2>
+<p>在凸轮加工过程中，误差主要来源于以下几个方面：</p>
+<ul>
+<li><strong>机床精度误差</strong>：机床自身的运动精度、刀具磨损及刚性不足可能会导致尺寸偏差。</li>
+<li><strong>夹具定位误差</strong>：夹具装夹不当或重复定位精度不足，可能造成加工位置偏移。</li>
+<li><strong>热变形误差</strong>：加工过程中产生的热量可能导致材料膨胀，影响最终尺寸精度。</li>
+<li><strong>测量误差</strong>：测量工具的精度、测量方法的不当以及环境因素都可能导致检测误差。</li>
+</ul>
+<h2 id="误差补偿方法">误差补偿方法</h2>
+<p>为了提高凸轮加工的精度，可以采用以下误差补偿策略：</p>
+<ol>
+<li><strong>软件补偿</strong>：通过数控系统中的误差补偿功能，调整加工路径，以修正已知的加工偏差。</li>
+<li><strong>硬件补偿</strong>：使用高稳定性的夹具和砂轮，以减少加工过程中可能产生的偏差。</li>
+<li><strong>过程优化</strong>：通过优化切削参数，如进给速度、切削深度等，减少热变形影响。</li>
+</ol>
+<h2 id="误差补偿工具">误差补偿工具</h2>
+<p><strong>Cam Grinding</strong> 提供了一整套的误差分析与补偿工具，帮助用户快速识别误差来源，并进行精准补偿，以提升加工精度和效率。其主要功能包括：</p>
+<ul>
+<li><strong>直径误差分析</strong>：判断砂轮实际直径与系统中输入的直径有误差时会产生多大的偏差。</li>
+<li><strong>CAM 误差叠加</strong>：将测量仪测量数据和标准凸轮数据进行对比，绘制实际加工出来的凸轮曲线。</li>
+<li><strong>CAM 误差对比</strong>：将连个凸轮曲线进行对比，分析两者在每个角度下的误差值。</li>
+<li><strong>加工误差修正</strong>：通过实际测量出的凸轮曲线和标准凸轮曲线进行比较，修正加工偏差。</li>
+</ul>
+<p>有效的误差补偿不仅能够显著提高凸轮加工的精度，还能减少废品率，延长设备使用寿命，并提升整体生产效率。合理利用先进的误差补偿工具和方法，能够确保生产质量达到最优水平。</p>
 
                                 
                                 </section>
@@ -612,7 +638,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"误差补偿","level":"1.6","depth":1,"next":{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},"previous":{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"articles":[{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"path":"deviation/deviation_add.md","ref":"deviation/deviation_add.md","articles":[]},{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},{"title":"加工误差修正","level":"1.6.4","depth":2,"path":"deviation/deviation_fix.md","ref":"deviation/deviation_fix.md","articles":[]}],"dir":"neutral"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"deviation/README.md","mtime":"2025-01-21T01:06:48.511Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T01:06:58.522Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"误差补偿","level":"1.6","depth":1,"next":{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},"previous":{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"articles":[{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"path":"deviation/deviation_add.md","ref":"deviation/deviation_add.md","articles":[]},{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},{"title":"加工误差修正","level":"1.6.4","depth":2,"path":"deviation/deviation_fix.md","ref":"deviation/deviation_fix.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"deviation/README.md","mtime":"2025-01-21T03:48:22.223Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T03:48:27.243Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

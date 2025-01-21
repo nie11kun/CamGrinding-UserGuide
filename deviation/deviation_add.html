@@ -568,7 +568,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>1</p>
+                                <h1 id="cam-误差叠加">CAM 误差叠加</h1>
+<p>主要用于将克林伯格 P65 测量仪或同类型设备的检测结果和标准凸轮数据进行极径方向的数据叠加，绘制实际加工出来的凸轮曲线。</p>
+<p>P65 测量仪可以输出每个角度下相对于标准升程的误差值，需要根据这些测量数据制作出误差数据文件。</p>
+<p>下面是一张的测量数据总图：
+<img src="resources/meas_main.jpg" alt="img"></img></p>
+<p>下面是部分角度下误差值：
+<img src="resources/meas_detail.jpg" alt="img"></img></p>
+<p>根据这些误差数据，制作误差数据文件，格式如下：</p>
+<pre><code>A,0,70
+0.015,-0.008
+
+A,71,150
+-0.008,0.01
+
+A,151,210
+0.01
+
+A,211,290
+0.01,-0.008
+
+A,291,359
+-0.008,0.015
+</code></pre><p><code>A</code> 关键词指定一个角度范围，例如：<code>71</code> 为起始角度，<code>150</code> 为结束角度，<code>-0.008</code> 为 起点角度处误差，<code>0.01</code> 为终点角度处误差。这个角度区间内误差自然过渡。</p>
+<p>推荐每 10 度作为一个角度区间，可以保证误差数据准确还原的基础上不使得误差文件过大。</p>
+<h2 id="原始凸轮文件">原始凸轮文件</h2>
+<p>输入一个标准的凸轮文件，用于作为误差数据的基础，从而制作出叠加误差的凸轮文件。测量仪使用的测量文件也需要基于此凸轮生成。</p>
+<h2 id="误差数据文件">误差数据文件</h2>
+<p>输入根据测量数据制作的误差文件，根据上面提到的规则进行制作。</p>
+<h2 id="误差数据方向">误差数据方向</h2>
+<p>定义误差数据中 <code>A</code> 标记的角度是以 X 轴正向坐标轴为基准轴沿顺时针方向还是逆时针方向定义。</p>
+<p>需要根据测量仪实际测量方向以及误差数据方向来选择。</p>
+<h2 id="进刀尺寸调整">进刀尺寸调整</h2>
+<p>可以将误差数据整体叠加一个值，用于忽略实际加工多磨或少磨了少量尺寸情况下参数的误差。</p>
+<p>例如：误差数据最大的地方是 -0.02，则说明整体尺寸可能磨小了，可以尝试将进刀尺寸调整参数设置为 0.02，这样可能更加方便观察误差变化。</p>
+<h2 id="dxf-保存地址">DXF 保存地址</h2>
+<p>输出实际测量出的凸轮曲线到文件。会同时输出误差曲线中定义的误差曲线图形。</p>
+<p>以下图形是上面的示例误差数据生成的误差曲线：
+<img src="resources/deviation_add.jpg" alt="img"></img></p>
 
                                 
                                 </section>
@@ -612,7 +649,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"next":{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},"previous":{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},"dir":"neutral"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"deviation/deviation_add.md","mtime":"2025-01-21T01:06:48.511Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T01:06:58.522Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"next":{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},"previous":{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"deviation/deviation_add.md","mtime":"2025-01-21T03:48:22.223Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T03:48:27.243Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
