@@ -3,7 +3,7 @@
 <html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
-        <title>升程转凸轮 · Cam Grinding User Guide</title>
+        <title>升程转凸轮曲线 · Cam Grinding User Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -318,7 +318,7 @@
                     
                         <b>1.5.1.</b>
                     
-                    凸轮转升程
+                    凸轮转升程曲线
             
                 </a>
             
@@ -333,7 +333,7 @@
                     
                         <b>1.5.2.</b>
                     
-                    升程转凸轮
+                    升程转凸轮曲线
             
                 </a>
             
@@ -348,7 +348,7 @@
                     
                         <b>1.5.3.</b>
                     
-                    速度转升程
+                    速度转升程曲线
             
                 </a>
             
@@ -553,7 +553,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >升程转凸轮</a>
+        <a href=".." >升程转凸轮曲线</a>
     </h1>
 </div>
 
@@ -568,7 +568,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="升程转凸轮曲线">升程转凸轮曲线</h1>
+<p>此工具输入一个升程曲线文件，输出一个凸轮曲线文件。</p>
+<h2 id="升程曲线文件">升程曲线文件</h2>
+<p>输入一个 DXF 格式的升程曲线文件，文件中的曲线数据中的 X 轴表示角度，Y 坐标表示对应角度下的升程量。X 轴坐标必须大于 0。Y 轴坐标一般最小值为 0 表示基圆部分。曲线必须是线性的。</p>
+<p>以下是一个典型的升程曲线示例：
+<img src="resources/lift.jpg" alt="img"></img></p>
+<h2 id="dxf-读取精度">DXF 读取精度</h2>
+<p>DXF 读取精度参数用于设置 DXF 文件的离散精度，定义原始凸轮曲线离散化后相邻离散点之间的最大距离。设置值越小，对凸轮曲线的识别精度越高，建议设置为 0.005mm，即可满足精度要求。</p>
+<h2 id="基圆半径">基圆半径</h2>
+<p>设置对应目标凸轮的基圆半径，基圆半径会影响凸轮的尺寸大小。</p>
+<h2 id="滚子半径">滚子半径</h2>
+<p>如果输入的升程数据是滚子中心的升程曲线，则必须在此处设置对应测杆滚子半径，才能正确的生成凸轮轨迹。</p>
+<h2 id="升程方向">升程方向</h2>
+<p>设置升程曲线中 X 轴的角度数据是以 X 轴正向为基准，按照顺时针方向还是逆时针方向定义的角度。</p>
+<p>对设置为顺时针生成的凸轮曲线和设置逆时针生成的凸轮曲线比较，两者是相对于X轴上下镜像的关系：
+<img src="resources/lift_direction.jpg" alt="img"></img></p>
+<h2 id="x-轴缩放">X 轴缩放</h2>
+<p>此参数用于输出的 html 图形中 X 轴坐标进行缩放处理。设置 0.1 则生成的 html X 轴数据会缩小到标准数据的 0.1 倍。</p>
+<p>主要为了方便观察部分升程过小的曲线。</p>
+<h2 id="dxf-保存地址">DXF 保存地址</h2>
+<p>定义输出的凸轮曲线的文件路径。</p>
+
                                 
                                 </section>
                             
@@ -595,12 +616,12 @@
 
             
                 
-                <a href="cam2lift.html" class="navigation navigation-prev " aria-label="Previous page: 凸轮转升程">
+                <a href="cam2lift.html" class="navigation navigation-prev " aria-label="Previous page: 凸轮转升程曲线">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="velocity2lift.html" class="navigation navigation-next " aria-label="Next page: 速度转升程">
+                <a href="velocity2lift.html" class="navigation navigation-next " aria-label="Next page: 速度转升程曲线">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -611,7 +632,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"升程转凸轮","level":"1.5.2","depth":2,"next":{"title":"速度转升程","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"previous":{"title":"凸轮转升程","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},"dir":"neutral"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/lift2cam.md","mtime":"2025-01-20T08:27:50.574Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-20T08:27:55.159Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"升程转凸轮曲线","level":"1.5.2","depth":2,"next":{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"previous":{"title":"凸轮转升程曲线","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/lift2cam.md","mtime":"2025-01-21T01:06:48.499Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T01:06:58.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

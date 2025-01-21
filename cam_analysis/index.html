@@ -318,7 +318,7 @@
                     
                         <b>1.5.1.</b>
                     
-                    凸轮转升程
+                    凸轮转升程曲线
             
                 </a>
             
@@ -333,7 +333,7 @@
                     
                         <b>1.5.2.</b>
                     
-                    升程转凸轮
+                    升程转凸轮曲线
             
                 </a>
             
@@ -348,7 +348,7 @@
                     
                         <b>1.5.3.</b>
                     
-                    速度转升程
+                    速度转升程曲线
             
                 </a>
             
@@ -568,7 +568,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>1</p>
+                                <h1 id="曲线分析">曲线分析</h1>
+<p>本章介绍如何使用 <strong>Cam Grinding</strong> 对凸轮进行曲线分析。主要包含<code>凸轮转生成曲线</code>、<code>升程转凸轮曲线</code>、<code>速度转升程曲线</code>等功能。</p>
+<p><img src="resources/cam_run.jpg" alt="img"></img></p>
+<p>通过这些功能，可以对一个凸轮设计进行完整的分析，了解凸轮的曲线特性，以及发现设计缺陷等问题。</p>
+<ol>
+<li><p><strong>凸轮曲线</strong><br></br>凸轮曲线描述了从动件随时间或凸轮转角的运动轨迹，常见曲线类型包括等速、等加速减速、简谐运动等。</p>
+</li>
+<li><p><strong>升程（行程）</strong><br></br>升程是指从动件从最低位置移动到最高位置的距离，决定了机构的工作行程。升程通常分为升程段、停歇段和回程段。</p>
+</li>
+<li><p><strong>速度</strong><br></br>速度表示从动件运动的快慢，受凸轮曲线形状的影响。合理的速度曲线可以减少冲击，提高系统平稳性。</p>
+</li>
+<li><p><strong>加速度</strong><br></br>加速度是速度变化的速率，直接影响机构的惯性负载。平滑的加速度曲线可减少振动和噪声，延长机械寿命。</p>
+</li>
+</ol>
+<p>选择合适的凸轮曲线，可优化系统的运动特性，达到平稳、高效的工作效果。</p>
 
                                 
                                 </section>
@@ -601,7 +615,7 @@
                 </a>
                 
                 
-                <a href="cam2lift.html" class="navigation navigation-next " aria-label="Next page: 凸轮转升程">
+                <a href="cam2lift.html" class="navigation navigation-next " aria-label="Next page: 凸轮转升程曲线">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -612,7 +626,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"曲线分析","level":"1.5","depth":1,"next":{"title":"凸轮转升程","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},"previous":{"title":"CAM 图形变换","level":"1.4.3","depth":2,"path":"cam_drawing/camtransform.md","ref":"cam_drawing/camtransform.md","articles":[]},"articles":[{"title":"凸轮转升程","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},{"title":"升程转凸轮","level":"1.5.2","depth":2,"path":"cam_analysis/lift2cam.md","ref":"cam_analysis/lift2cam.md","articles":[]},{"title":"速度转升程","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]}],"dir":"neutral"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/README.md","mtime":"2025-01-20T08:27:50.574Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-20T08:27:55.159Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"曲线分析","level":"1.5","depth":1,"next":{"title":"凸轮转升程曲线","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},"previous":{"title":"CAM 图形变换","level":"1.4.3","depth":2,"path":"cam_drawing/camtransform.md","ref":"cam_drawing/camtransform.md","articles":[]},"articles":[{"title":"凸轮转升程曲线","level":"1.5.1","depth":2,"path":"cam_analysis/cam2lift.md","ref":"cam_analysis/cam2lift.md","articles":[]},{"title":"升程转凸轮曲线","level":"1.5.2","depth":2,"path":"cam_analysis/lift2cam.md","ref":"cam_analysis/lift2cam.md","articles":[]},{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/README.md","mtime":"2025-01-21T01:06:48.499Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-21T01:06:58.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
