@@ -2,6 +2,8 @@
 
 本章介绍如何使用 **Cam Grinding** 绘制凸轮，以便于后续的加工和管理。该软件提供多种方式生成凸轮 DXF 文件，满足不同场景下的需求。
 
+![img](resources/cam.jpg)
+
 **Cam Grinding** 支持以下三种方式输出凸轮 DXF 文件：
 
 1. **XY 点位文件**
