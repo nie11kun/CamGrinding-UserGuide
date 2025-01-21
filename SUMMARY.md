@@ -22,7 +22,7 @@
     * [CAM 误差叠加](deviation/deviation_add.md)
     * [CAM 误差对比](deviation/deviation_compare.md)
     * [加工误差修正](deviation/deviation_fix.md)
-* [其他工具](dxf_tools/README.md)
+* [DXF 工具](dxf_tools/README.md)
     * [DXF 对比](dxf_tools/dxf_compare.md)
     * [DXF 离散化](dxf_tools/dxf_discretize.md)
     * [DXF 拟合圆弧](dxf_tools/dxf_fit_arc.md)
