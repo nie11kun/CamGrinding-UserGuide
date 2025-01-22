@@ -19,7 +19,7 @@
 
 1. [快速开始](getting_started/README.md): 了解软件基本功能和界面，快速熟悉操作流程。
 
-2. [代码生成](generation/README.md): 学习如何根据参数生成加工代码，并导出适配不同设备的文件。
+2. [代码生成](genaration/README.md): 学习如何根据参数生成加工代码，并导出适配不同设备的文件。
 
 3. [凸轮绘制](cam_drawing/README.md): 掌握 CAD 绘图功能，用于凸轮设计与可视化。
 
