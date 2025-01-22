@@ -14,5 +14,7 @@
 
 输出的误差曲线文件路径。
 
+---
+
 html 中可以观察到最大误差和最小误差值及其所在角度：
 ![img](resources/deviation_compare.jpg)

@@ -18,4 +18,7 @@
 
 选择叠加后的 DXF 文件保存路径。同时会输出 html 格式文件。
 
+---
+
+输出效果示例：
 ![img](resources/dxf_compare.jpg)
