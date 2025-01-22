@@ -2,7 +2,7 @@
 body {
     /* Windows 和 macOS 常见字体序列 */
     font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "SimSun", "Segoe UI", "Times New Roman", serif;
-    font-size: 12pt;
+    font-size: 14pt;
     line-height: 1.8;
     color: #333;
     text-align: justify;
@@ -68,7 +68,7 @@ pre code {
     background: none;
     white-space: pre-wrap !important;
     word-wrap: break-word !important;
-    font-size: 11pt;
+    font-size: 14pt;
 }
 
 /* 表格样式 */
