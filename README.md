@@ -43,15 +43,18 @@
 
 如需帮助，请参考以下资源：
 
-1. **技术支持**  
-   如遇技术问题，请联系支持团队：  
-   **邮箱**：[camgrinding@niekun.net](mailto:camgrinding@niekun.net)
+1. **官方网站**  
+   访问官方网站：[https://cam-grinding-c2nnj0i.gamma.site/](https://cam-grinding-c2nnj0i.gamma.site/)
 
 2. **在线文档**  
    浏览完整的在线用户文档：[https://cg-manual.niekun.net/](https://cg-manual.niekun.net/)
 
 3. **常见问题 (FAQ)**  
    查看常见问题解答：[https://cg-manual.niekun.net/troubleshooting](https://cg-manual.niekun.net/troubleshooting)
+
+4. **技术支持**  
+   如遇技术问题，请联系支持团队：  
+   **邮箱**：[camgrinding@niekun.net](mailto:camgrinding@niekun.net)
 
 ## 反馈与建议
 
