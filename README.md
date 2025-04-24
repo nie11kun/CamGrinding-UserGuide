@@ -44,7 +44,7 @@
 如需帮助，请参考以下资源：
 
 1. **官方网站**  
-   访问官方网站：[https://cam-grinding-c2nnj0i.gamma.site/](https://cam-grinding-c2nnj0i.gamma.site/)
+   访问官方网站：[https://cg.niekun.net/](https://cg.niekun.net/)
 
 2. **在线文档**  
    浏览完整的在线用户文档：[https://cg-manual.niekun.net/](https://cg-manual.niekun.net/)
