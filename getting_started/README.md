@@ -5,6 +5,6 @@
 ![img](resources/cam.jpg)
 
 以下是加工凸轮的常规操作流程图：
-![img](resources/cam_process.svg)
+![img](resources/cam_process.png)
 
 更加详细的配置及功能介绍参考后续章节。
