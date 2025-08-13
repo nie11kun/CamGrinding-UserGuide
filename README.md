@@ -49,6 +49,9 @@
 2. **在线文档**  
    浏览完整的在线用户文档：[https://cg-manual.niekun.net/](https://cg-manual.niekun.net/)
 
+2. **交互式平面盘状凸轮设计规范**  
+   浏览完整的交互式平面盘状凸轮设计规范：[https://cam-design.niekun.net/](https://cam-design.niekun.net/)
+
 3. **常见问题 (FAQ)**  
    查看常见问题解答：[https://cg-manual.niekun.net/troubleshooting](https://cg-manual.niekun.net/troubleshooting)
 
