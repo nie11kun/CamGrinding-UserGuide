@@ -530,11 +530,11 @@
                                 <h1 id="凸轮曲线转公式方程">凸轮曲线转公式方程</h1>
 <p>给定凸轮的完整或者部分曲线，可以使用此工具推导出这段曲线的公式方程。</p>
 <p>可选拟合模式：<strong>傅里叶级数、多项式</strong>。</p>
-<p>对于完整的凸轮闭合曲线推荐使用<strong>傅里叶级数</strong>模式，精度更高，公式复杂度更低。</p>
 <h2 id="凸轮曲线文件">凸轮曲线文件</h2>
 <p>此处需要导入 DXF 格式的凸轮曲线文件，曲线可以是完整的凸轮，也可以是升程或降程部分曲线单独进行推导。</p>
 <h2 id="拟合模式">拟合模式</h2>
 <p>可选 <code>傅里叶级数/多项式</code>，根据需求选择合适的拟合模式。</p>
+<p>对于完整的凸轮闭合曲线推荐使用<strong>傅里叶级数</strong>模式，对于凸轮部分曲线推荐使用<strong>多项式</strong>模式。</p>
 <h2 id="最大拟合误差">最大拟合误差</h2>
 <p>设置拟合的公式方程和原始曲线的最大误差，单位:mm。</p>
 <p>设置的误差值越小，拟合精度越高，但是公式的复杂度会变大。反之，设置的误差值越大，拟合精度越低，但是公式的复杂度会变小。</p>
@@ -543,9 +543,29 @@
 <hr></hr>
 <p>以下是一个示例凸轮曲线：</p>
 <p><img src="resources/cam_formula.png" alt="img"></img></p>
-<p>截取其升程段的曲线：</p>
+<p>傅里叶级数模式拟合公式方程数据如下：</p>
+<pre><code>============================================================
+拟合曲线方程:
+============================================================
+傅里叶级数形式 (参数方程, t ∈ [0, 2π]):
+
+X(t) = a₀ + Σ(aₖcos(kt) + bₖsin(kt))
+Y(t) = c₀ + Σ(cₖcos(kt) + dₖsin(kt))
+
+具体系数:
+
+X(t) = 19.995219 - 62.609527*cos(1*t) - 63.693169*sin(1*t) + 0.794602*cos(2*t) - 0.286369*sin(2*t) + 1.518229*cos(3*t) + 2.020756*sin(3*t) + 0.044945*cos(4*t) + 0.360793*sin(4*t) - 0.440389*cos(5*t) - 0.264710*sin(5*t) - 0.173415*cos(6*t) - 0.086907*sin(6*t) - 0.024759*cos(7*t) + 0.003241*sin(7*t) - 0.062999*cos(8*t) - 0.009002*sin(8*t) - 0.054942*cos(9*t) + 0.000334*sin(9*t) - 0.021396*cos(10*t) - 0.001659*sin(10*t) - 0.019031*cos(11*t) - 0.006992*sin(11*t) - 0.016603*cos(12*t) - 0.000699*sin(12*t) - 0.009423*cos(13*t) - 0.000246*sin(13*t) - 0.009808*cos(14*t) - 0.002390*sin(14*t) - 0.007632*cos(15*t) - 0.000806*sin(15*t) - 0.004676*cos(16*t) + 0.000075*sin(16*t) - 0.005051*cos(17*t) - 0.000964*sin(17*t) - 0.004012*cos(18*t) + 0.000205*sin(18*t) - 0.002464*cos(19*t) - 0.000228*sin(19*t) - 0.002560*cos(20*t) - 0.000625*sin(20*t)
+
+Y(t) = -17.404440 + 53.582987*cos(1*t) - 74.500201*sin(1*t) - 0.515140*cos(2*t) - 0.636159*sin(2*t) - 1.252424*cos(3*t) + 2.254524*sin(3*t) - 0.211004*cos(4*t) + 0.418503*sin(4*t) + 0.290324*cos(5*t) - 0.278566*sin(5*t) + 0.221620*cos(6*t) - 0.036026*sin(6*t) + 0.072071*cos(7*t) + 0.044510*sin(7*t) + 0.034871*cos(8*t) - 0.026614*sin(8*t) + 0.034951*cos(9*t) - 0.019390*sin(9*t) + 0.023335*cos(10*t) + 0.000535*sin(10*t) + 0.015779*cos(11*t) - 0.005892*sin(11*t) + 0.013776*cos(12*t) - 0.003270*sin(12*t) + 0.009478*cos(13*t) - 0.000022*sin(13*t) + 0.006904*cos(14*t) - 0.002570*sin(14*t) + 0.006688*cos(15*t) - 0.001568*sin(15*t) + 0.004713*cos(16*t) + 0.000442*sin(16*t) + 0.003651*cos(17*t) - 0.001413*sin(17*t) + 0.003657*cos(18*t) - 0.000496*sin(18*t) + 0.002800*cos(19*t) + 0.000280*sin(19*t) + 0.001768*cos(20*t) - 0.000351*sin(20*t)
+
+谐波数: 20
+
+最大误差: 0.025374
+平均误差: 0.003167
+============================================================
+</code></pre><p>截取其升程段的曲线：</p>
 <p><img src="resources/cam_formula_crop.png" alt="img"></img></p>
-<p>拟合公式方程数据如下：</p>
+<p>多项式模式拟合公式方程数据如下：</p>
 <pre><code>============================================================
 拟合曲线方程:
 ============================================================
@@ -603,7 +623,7 @@ Y(t) = 1.848295*t^6 - 17.323869*t^5 + 19.960135*t^4 + 14.157023*t^3 - 53.384137*
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"凸轮转公式方程","level":"1.5.4","depth":2,"next":{"title":"误差补偿","level":"1.6","depth":1,"path":"deviation/README.md","ref":"deviation/README.md","articles":[{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"path":"deviation/deviation_add.md","ref":"deviation/deviation_add.md","articles":[]},{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},{"title":"加工误差修正","level":"1.6.4","depth":2,"path":"deviation/deviation_fix.md","ref":"deviation/deviation_fix.md","articles":[]}]},"previous":{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/cam2formula.md","mtime":"2025-09-03T01:28:29.614Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-09-03T01:28:36.703Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"凸轮转公式方程","level":"1.5.4","depth":2,"next":{"title":"误差补偿","level":"1.6","depth":1,"path":"deviation/README.md","ref":"deviation/README.md","articles":[{"title":"直径误差分析","level":"1.6.1","depth":2,"path":"deviation/deviation_analysis.md","ref":"deviation/deviation_analysis.md","articles":[]},{"title":"CAM 误差叠加","level":"1.6.2","depth":2,"path":"deviation/deviation_add.md","ref":"deviation/deviation_add.md","articles":[]},{"title":"CAM 误差对比","level":"1.6.3","depth":2,"path":"deviation/deviation_compare.md","ref":"deviation/deviation_compare.md","articles":[]},{"title":"加工误差修正","level":"1.6.4","depth":2,"path":"deviation/deviation_fix.md","ref":"deviation/deviation_fix.md","articles":[]}]},"previous":{"title":"速度转升程曲线","level":"1.5.3","depth":2,"path":"cam_analysis/velocity2lift.md","ref":"cam_analysis/velocity2lift.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"Cam Grinding 软件完整用户指南"},"file":{"path":"cam_analysis/cam2formula.md","mtime":"2025-09-03T01:34:17.184Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-09-03T01:34:23.414Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
