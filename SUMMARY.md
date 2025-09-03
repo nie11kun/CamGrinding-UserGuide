@@ -17,6 +17,7 @@
     * [凸轮转升程曲线](cam_analysis/cam2lift.md)
     * [升程转凸轮曲线](cam_analysis/lift2cam.md)
     * [速度转升程曲线](cam_analysis/velocity2lift.md)
+    * [凸轮转公式方程](cam_analysis/cam2formula.md)
 * [误差补偿](deviation/README.md)
     * [直径误差分析](deviation/deviation_analysis.md)
     * [CAM 误差叠加](deviation/deviation_add.md)
