@@ -5,6 +5,11 @@
     font-display: swap;
 }
 
+/* 针对书籍正文区域的段落 */
+.page-inner p {
+    text-align: left !important;
+}
+
 :root {
     /* 定义字体变量 */
     --base-font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
