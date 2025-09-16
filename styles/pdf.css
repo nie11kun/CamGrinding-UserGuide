@@ -10,6 +10,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* 针对书籍正文区域的段落 */
+.page-inner p {
+    text-align: left !important;
+}
+
 /* 标题样式 */
 h1, h2, h3, h4, h5, h6 {
     /* 使用系统默认的黑体字体 */
