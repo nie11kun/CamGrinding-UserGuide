@@ -1,0 +1,982 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>3.5 CAM 共轭计算 · Cam Grinding User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.2.5">
+        <meta name="author" content="Nie Kun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4_toolbox_analysis/" />
+    
+    
+    <link rel="prev" href="cam_transform.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    软件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1. 快速开始与界面总览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1.1 系统要求与安装启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_getting_started/auth_and_update.html">
+            
+                <a href="../1_getting_started/auth_and_update.html">
+            
+                    
+                    1.2 授权激活与版本升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_getting_started/ui_overview.html">
+            
+                <a href="../1_getting_started/ui_overview.html">
+            
+                    
+                    1.3 界面布局与菜单栏导览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_getting_started/quick_workflow.html">
+            
+                <a href="../1_getting_started/quick_workflow.html">
+            
+                    
+                    1.4 五分钟快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_code_generation/">
+            
+                <a href="../2_code_generation/">
+            
+                    
+                    2. 数控加工代码生成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_code_generation/">
+            
+                <a href="../2_code_generation/">
+            
+                    
+                    2.1 代码生成流程概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_code_generation/basic_params.html">
+            
+                <a href="../2_code_generation/basic_params.html">
+            
+                    
+                    2.2 基本参数配置详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_code_generation/advanced_params.html">
+            
+                <a href="../2_code_generation/advanced_params.html">
+            
+                    
+                    2.3 高级参数与算法配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_code_generation/output_and_plots.html">
+            
+                <a href="../2_code_generation/output_and_plots.html">
+            
+                    
+                    2.4 输出文件与交互图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_code_generation/sinumerik_transmit.html">
+            
+                <a href="../2_code_generation/sinumerik_transmit.html">
+            
+                    
+                    2.5 西门子 SINUMERIK 机床配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. 绘图参数建模
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.1 绘图参数模块总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="xy_points.html">
+            
+                <a href="xy_points.html">
+            
+                    
+                    3.2 XY 点位文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="cam_data_file.html">
+            
+                <a href="cam_data_file.html">
+            
+                    
+                    3.3 CAM 数据文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="cam_transform.html">
+            
+                <a href="cam_transform.html">
+            
+                    
+                    3.4 CAM 图形变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="cam_conjugate.html">
+            
+                <a href="cam_conjugate.html">
+            
+                    
+                    3.5 CAM 共轭计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4. 工具箱：凸轮分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4.1 凸轮分析体系概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_toolbox_analysis/cam_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/cam_to_lift.html">
+            
+                    
+                    4.2 凸轮转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_toolbox_analysis/lift_to_cam.html">
+            
+                <a href="../4_toolbox_analysis/lift_to_cam.html">
+            
+                    
+                    4.3 升程转凸轮曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                    
+                    4.4 速度转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_toolbox_analysis/curve_to_formula.html">
+            
+                <a href="../4_toolbox_analysis/curve_to_formula.html">
+            
+                    
+                    4.5 曲线转公式方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5. 工具箱：加工误差
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5.1 误差诊断与补偿概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolbox_error/error_correction.html">
+            
+                <a href="../5_toolbox_error/error_correction.html">
+            
+                    
+                    5.2 加工误差修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolbox_error/diameter_error_analysis.html">
+            
+                <a href="../5_toolbox_error/diameter_error_analysis.html">
+            
+                    
+                    5.3 直径误差分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolbox_error/cam_error_superposition.html">
+            
+                <a href="../5_toolbox_error/cam_error_superposition.html">
+            
+                    
+                    5.4 CAM 误差叠加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolbox_error/cam_error_comparison.html">
+            
+                <a href="../5_toolbox_error/cam_error_comparison.html">
+            
+                    
+                    5.5 CAM 误差对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6_toolbox_dxf/">
+            
+                <a href="../6_toolbox_dxf/">
+            
+                    
+                    6. 工具箱：DXF 处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6_toolbox_dxf/">
+            
+                <a href="../6_toolbox_dxf/">
+            
+                    
+                    6.1 DXF 处理工具概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6_toolbox_dxf/dxf_compare.html">
+            
+                <a href="../6_toolbox_dxf/dxf_compare.html">
+            
+                    
+                    6.2 DXF 文件对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6_toolbox_dxf/dxf_discretization.html">
+            
+                <a href="../6_toolbox_dxf/dxf_discretization.html">
+            
+                    
+                    6.3 DXF 离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6_toolbox_dxf/dxf_fit_arc.html">
+            
+                <a href="../6_toolbox_dxf/dxf_fit_arc.html">
+            
+                    
+                    6.4 DXF 拟合圆弧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7. 零件库与配置管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7.1 零件库操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8. 典型工程实战案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8.1 实战案例导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                <a href="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                    
+                    8.2 案例一：SK722 高速共轭凸轮设计磨削
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                <a href="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                    
+                    8.3 案例二：EC70 偏心轴主副凸轮配对
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                <a href="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                    
+                    8.4 案例三：LD3600 大升程凸轮闭环修调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9. 故障排除与报警速查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9.1 校验报警速查与排查指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.5 CAM 共轭计算</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cam-共轭计算">CAM 共轭计算</h1>
+<p>“CAM 共轭计算”工具专门用于<strong>共轭双凸轮机构（Conjugate Cam Mechanism）</strong>的正向与反向包络设计。通过已知的基准凸轮（主凸轮）轮廓及双摆臂铰链机构几何参数，精确解算出消除传动间隙的配对共轭凸轮（副凸轮）工作轮廓。</p>
+<hr></hr>
+<h2 id="1-操作界面与参数布局">1. 操作界面与参数布局</h2>
+<p>打开主界面并切换至 <strong>绘图参数 -&gt; CAM 共轭计算</strong>：</p>
+<p><img src="resources/tab_cam_conjugate.png" alt="CAM 共轭计算配置界面"></img></p>
+<hr></hr>
+<h2 id="2-机构原理与几何模型">2. 机构原理与几何模型</h2>
+<p>共轭凸轮机构广泛应用于高速剑杆织机、凸轮分割器、自动冲压机等重载高频自动化设备中。它通过两组刚性联动的摆臂和滚子，分别紧贴在主凸轮与副凸轮的表面，实现<strong>无弹簧反求、双向正向驱动、零侧隙高刚度传动</strong>。</p>
+<pre><code>       摆臂回转支点 O (中心距 L)
+             / \
+   摆臂 1  /   \  摆臂 2 (夹角 γ)
+   (长 l₁) /     \ (长 l₂)
+          /       \
+      滚子 1     滚子 2 (半径 r_r)
+       (●)        (●)
+        |          |
+    [主凸轮 1]  [共轭凸轮 2] (同轴同步旋转)
+           \      /
+            \    /
+           凸轮轴心 C(0, 0)
+</code></pre><h3 id="机构参数对应关系">机构参数对应关系</h3>
+<ul>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C(0,0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span></strong>：凸轮旋转中心（原点）；</li>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi></mrow><annotation encoding="application/x-tex">O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span></strong>：双摆臂机构回转支点，其与凸轮中心的水平距离即为<strong>摆臂中心距 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span></strong>；</li>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">l_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></strong>：接触主凸轮 1 的摆臂长度；</li>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">l_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></strong>：接触共轭凸轮 2 的摆臂长度；</li>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span></strong>：摆臂 1 到摆臂 2 之间的夹角；</li>
+<li><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">r_r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></strong>：随动滚子半径。</li>
+</ul>
+<hr></hr>
+<h2 id="3-参数定义与配置说明">3. 参数定义与配置说明</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数项</th>
+<th style="text-align:left">字段标识</th>
+<th style="text-align:left">示例取值</th>
+<th style="text-align:left">详细说明与工程含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>原始凸轮文件</strong></td>
+<td style="text-align:left"><code>original_cam_file</code></td>
+<td style="text-align:left"><code>*.dxf</code></td>
+<td style="text-align:left">已知的主凸轮（凸轮 1）DXF 轮廓文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>摆臂中心距</strong></td>
+<td style="text-align:left"><code>pivot_distance</code></td>
+<td style="text-align:left"><code>110.0</code></td>
+<td style="text-align:left">摆臂回转支承轴心到凸轮轴心之间的中心距离 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>mm</mtext></mrow><annotation encoding="application/x-tex">\text{mm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">mm</span></span></span></span></span>）。<br></br>• <strong>正值</strong>：支点位于凸轮中心右侧；<br></br>• <strong>负值</strong>：支点位于凸轮中心左侧</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>滚子半径</strong></td>
+<td style="text-align:left"><code>roller_radius</code></td>
+<td style="text-align:left"><code>16.0</code></td>
+<td style="text-align:left">摆臂末端装配的从动滚子半径 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">r_r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>mm</mtext></mrow><annotation encoding="application/x-tex">\text{mm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">mm</span></span></span></span></span>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>凸轮1摆臂长度</strong></td>
+<td style="text-align:left"><code>cam_1_pendulum_length</code></td>
+<td style="text-align:left"><code>75.0</code></td>
+<td style="text-align:left">接触主凸轮 1 的摆臂有效力臂长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">l_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>mm</mtext></mrow><annotation encoding="application/x-tex">\text{mm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">mm</span></span></span></span></span>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>凸轮2摆臂长度</strong></td>
+<td style="text-align:left"><code>cam_2_pendulum_length</code></td>
+<td style="text-align:left"><code>75.0</code></td>
+<td style="text-align:left">接触共轭凸轮 2 的摆臂有效力臂长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">l_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>mm</mtext></mrow><annotation encoding="application/x-tex">\text{mm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">mm</span></span></span></span></span>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>摆臂夹角</strong></td>
+<td style="text-align:left"><code>cam_pendulums_angle</code></td>
+<td style="text-align:left"><code>60.0</code></td>
+<td style="text-align:left">两摆臂中心线之间的几何夹角 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span>（度）：<br></br>• <strong>逆时针为正</strong>（摆臂 1 逆时针转向摆臂 2）；<br></br>• <strong>顺时针为负</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>DXF 保存地址</strong></td>
+<td style="text-align:left"><code>output_path</code></td>
+<td style="text-align:left">必填</td>
+<td style="text-align:left">求解生成的配对共轭凸轮 DXF 文件路径</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="4-求解算法与包络特性">4. 求解算法与包络特性</h2>
+<p>软件底层采用基于机构运动学反转法的<strong>连续性接触包络求解器</strong>：</p>
+<ol>
+<li><strong>运动学反转</strong>：假定主凸轮 1 保持静止，双摆臂支座 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi></mrow><annotation encoding="application/x-tex">O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span> 绕凸轮轴心以步距 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>=</mo><mn>0.</mn><msup><mn>5</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\Delta \theta = 0.5^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.674115em;vertical-align:0em;"></span><span class="mord">0.</span><span class="mord"><span class="mord">5</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span> 进行反向相对回转；</li>
+<li><strong>接触轨迹追踪</strong>：基于非线性距离极值方程，实时追踪滚子 1 贴合在凸轮 1 表面的动态切点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">P_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，求出双摆臂的摆角响应序列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\psi(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>；</li>
+<li><strong>刚体位姿传递</strong>：根据固定夹角 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> 和力臂长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">l_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01968em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，推导计算出滚子 2 的理论几何中心轨迹 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P_2(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>；</li>
+<li><strong>包络线与去噪滤波</strong>：求取滚子 2 的接触族包络线，并激活自适应解缠绕（Unwrap）与中位距离离群点过滤算法（阈值倍数 2.0），剔除反向拐点自交虚根，输出光滑闭合的共轭工作轮廓。</li>
+</ol>
+<hr></hr>
+<h2 id="5-输出成果与交互校验">5. 输出成果与交互校验</h2>
+<p>点击 <strong>生成凸轮数据</strong> 后，系统将同步生成共轭副凸轮的 DXF 轮廓与交互式装配校验图：</p>
+<p><img src="resources/conjugate_result_html.png" alt="共轭凸轮装配运动学仿真"></img></p>
+<blockquote>
+<p>[!NOTE]
+在生成的 HTML 交互图表中，蓝色曲线为主凸轮轮廓，橙色曲线为生成的共轭凸轮轮廓。通过鼠标悬停可实时读取主从凸轮在任意工作相位下的瞬时接触点与摆臂位置，验证机构全行程内无干涉与死点。</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cam_transform.html" class="navigation navigation-prev " aria-label="Previous page: 3.4 CAM 图形变换">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4_toolbox_analysis/" class="navigation navigation-next " aria-label="Next page: 4. 工具箱：凸轮分析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.5 CAM 共轭计算","level":"1.4.5","depth":2,"next":{"title":"4. 工具箱：凸轮分析","level":"1.5","depth":1,"path":"4_toolbox_analysis/README.md","ref":"4_toolbox_analysis/README.md","articles":[{"title":"4.1 凸轮分析体系概览","level":"1.5.1","depth":2,"path":"4_toolbox_analysis/README.md","ref":"4_toolbox_analysis/README.md","articles":[]},{"title":"4.2 凸轮转升程曲线","level":"1.5.2","depth":2,"path":"4_toolbox_analysis/cam_to_lift.md","ref":"4_toolbox_analysis/cam_to_lift.md","articles":[]},{"title":"4.3 升程转凸轮曲线","level":"1.5.3","depth":2,"path":"4_toolbox_analysis/lift_to_cam.md","ref":"4_toolbox_analysis/lift_to_cam.md","articles":[]},{"title":"4.4 速度转升程曲线","level":"1.5.4","depth":2,"path":"4_toolbox_analysis/velocity_to_lift.md","ref":"4_toolbox_analysis/velocity_to_lift.md","articles":[]},{"title":"4.5 曲线转公式方程","level":"1.5.5","depth":2,"path":"4_toolbox_analysis/curve_to_formula.md","ref":"4_toolbox_analysis/curve_to_formula.md","articles":[]}]},"previous":{"title":"3.4 CAM 图形变换","level":"1.4.4","depth":2,"path":"3_cam_drawing/cam_transform.md","ref":"3_cam_drawing/cam_transform.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"凸轮磨削软件 (Cam Grinding v1.29.0) 完整用户指南与工程实战手册"},"file":{"path":"3_cam_drawing/cam_conjugate.md","mtime":"2026-11-06T03:19:41.184Z","type":"markdown"},"gitbook":{"version":"6.2.5","time":"2026-11-06T03:19:48.834Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

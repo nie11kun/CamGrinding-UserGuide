@@ -1,0 +1,971 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>6.4 DXF 拟合圆弧 · Cam Grinding User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.2.5">
+        <meta name="author" content="Nie Kun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../7_parts_library/" />
+    
+    
+    <link rel="prev" href="dxf_discretization.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    软件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1. 快速开始与界面总览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1.1 系统要求与安装启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_getting_started/auth_and_update.html">
+            
+                <a href="../1_getting_started/auth_and_update.html">
+            
+                    
+                    1.2 授权激活与版本升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_getting_started/ui_overview.html">
+            
+                <a href="../1_getting_started/ui_overview.html">
+            
+                    
+                    1.3 界面布局与菜单栏导览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_getting_started/quick_workflow.html">
+            
+                <a href="../1_getting_started/quick_workflow.html">
+            
+                    
+                    1.4 五分钟快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_code_generation/">
+            
+                <a href="../2_code_generation/">
+            
+                    
+                    2. 数控加工代码生成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_code_generation/">
+            
+                <a href="../2_code_generation/">
+            
+                    
+                    2.1 代码生成流程概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_code_generation/basic_params.html">
+            
+                <a href="../2_code_generation/basic_params.html">
+            
+                    
+                    2.2 基本参数配置详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_code_generation/advanced_params.html">
+            
+                <a href="../2_code_generation/advanced_params.html">
+            
+                    
+                    2.3 高级参数与算法配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_code_generation/output_and_plots.html">
+            
+                <a href="../2_code_generation/output_and_plots.html">
+            
+                    
+                    2.4 输出文件与交互图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_code_generation/sinumerik_transmit.html">
+            
+                <a href="../2_code_generation/sinumerik_transmit.html">
+            
+                    
+                    2.5 西门子 SINUMERIK 机床配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_cam_drawing/">
+            
+                <a href="../3_cam_drawing/">
+            
+                    
+                    3. 绘图参数建模
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_cam_drawing/">
+            
+                <a href="../3_cam_drawing/">
+            
+                    
+                    3.1 绘图参数模块总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_cam_drawing/xy_points.html">
+            
+                <a href="../3_cam_drawing/xy_points.html">
+            
+                    
+                    3.2 XY 点位文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_cam_drawing/cam_data_file.html">
+            
+                <a href="../3_cam_drawing/cam_data_file.html">
+            
+                    
+                    3.3 CAM 数据文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_cam_drawing/cam_transform.html">
+            
+                <a href="../3_cam_drawing/cam_transform.html">
+            
+                    
+                    3.4 CAM 图形变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3_cam_drawing/cam_conjugate.html">
+            
+                <a href="../3_cam_drawing/cam_conjugate.html">
+            
+                    
+                    3.5 CAM 共轭计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4. 工具箱：凸轮分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4.1 凸轮分析体系概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_toolbox_analysis/cam_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/cam_to_lift.html">
+            
+                    
+                    4.2 凸轮转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_toolbox_analysis/lift_to_cam.html">
+            
+                <a href="../4_toolbox_analysis/lift_to_cam.html">
+            
+                    
+                    4.3 升程转凸轮曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                    
+                    4.4 速度转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_toolbox_analysis/curve_to_formula.html">
+            
+                <a href="../4_toolbox_analysis/curve_to_formula.html">
+            
+                    
+                    4.5 曲线转公式方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5. 工具箱：加工误差
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5.1 误差诊断与补偿概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolbox_error/error_correction.html">
+            
+                <a href="../5_toolbox_error/error_correction.html">
+            
+                    
+                    5.2 加工误差修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolbox_error/diameter_error_analysis.html">
+            
+                <a href="../5_toolbox_error/diameter_error_analysis.html">
+            
+                    
+                    5.3 直径误差分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolbox_error/cam_error_superposition.html">
+            
+                <a href="../5_toolbox_error/cam_error_superposition.html">
+            
+                    
+                    5.4 CAM 误差叠加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolbox_error/cam_error_comparison.html">
+            
+                <a href="../5_toolbox_error/cam_error_comparison.html">
+            
+                    
+                    5.5 CAM 误差对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6. 工具箱：DXF 处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6.1 DXF 处理工具概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="dxf_compare.html">
+            
+                <a href="dxf_compare.html">
+            
+                    
+                    6.2 DXF 文件对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="dxf_discretization.html">
+            
+                <a href="dxf_discretization.html">
+            
+                    
+                    6.3 DXF 离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="dxf_fit_arc.html">
+            
+                <a href="dxf_fit_arc.html">
+            
+                    
+                    6.4 DXF 拟合圆弧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7. 零件库与配置管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7.1 零件库操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8. 典型工程实战案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8.1 实战案例导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                <a href="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                    
+                    8.2 案例一：SK722 高速共轭凸轮设计磨削
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                <a href="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                    
+                    8.3 案例二：EC70 偏心轴主副凸轮配对
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                <a href="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                    
+                    8.4 案例三：LD3600 大升程凸轮闭环修调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9. 故障排除与报警速查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9.1 校验报警速查与排查指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.4 DXF 拟合圆弧</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dxf-拟合圆弧">DXF 拟合圆弧</h1>
+<p>“DXF 拟合圆弧”工具用于将由数千至数万个微小直线段构成的密集离散凸轮轮廓，在严格保证几何公差的前提下，通过数学优化算法智能合并拟合为由<strong>最少数量的圆弧（Arc）与直线（Line）组成的切向连续轮廓</strong>。</p>
+<hr></hr>
+<h2 id="1-操作界面与参数布局">1. 操作界面与参数布局</h2>
+<p>打开主界面并切换至 <strong>工具 -&gt; DXF 处理 -&gt; DXF 拟合圆弧</strong>：</p>
+<p><img src="resources/tab_dxf_fit_arc.png" alt="DXF 拟合圆弧配置界面"></img></p>
+<hr></hr>
+<h2 id="2-参数定义与配置说明">2. 参数定义与配置说明</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数项</th>
+<th style="text-align:left">字段标识</th>
+<th style="text-align:left">推荐设置</th>
+<th style="text-align:left">详细说明与工程含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>凸轮曲线文件</strong></td>
+<td style="text-align:left"><code>dxf_file_path</code></td>
+<td style="text-align:left">必填</td>
+<td style="text-align:left">待拟合的离散凸轮 DXF 轮廓文件路径</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>拟合误差</strong></td>
+<td style="text-align:left"><code>fit_arcs_accuracy</code></td>
+<td style="text-align:left"><code>1.0</code></td>
+<td style="text-align:left">几何逼近公差阈值（<strong>基准单位：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn><mtext>&nbsp;</mtext><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">0.1\ \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0.1</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span></strong>）：<br></br>• 设置为 <code>1.0</code> 对应实际最大残差 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>0.1</mn><mtext>&nbsp;</mtext><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\le 0.1\ \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0.1</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.0001</mn><mtext>&nbsp;mm</mtext></mrow><annotation encoding="application/x-tex">0.0001\ \text{mm}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0.0001</span><span class="mspace">&nbsp;</span><span class="mord text"><span class="mord">mm</span></span></span></span></span>）；<br></br>• 设置为 <code>5.0</code> 对应最大残差 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>0.5</mn><mtext>&nbsp;</mtext><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\le 0.5\ \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0.5</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span>；<br></br>• 数值越小越逼近原图，但圆弧段数会相应增加；<strong><code>1.0</code> 为高精度磨削推荐平衡值</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>G 代码反向</strong></td>
+<td style="text-align:left"><code>g_code_reverse</code></td>
+<td style="text-align:left">默认不勾选</td>
+<td style="text-align:left">勾选后，若输出数控加工代码，将把圆弧插补指令中的 <code>G02</code>（顺圆）与 <code>G03</code>（逆圆）进行全局对调</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>输出路径</strong></td>
+<td style="text-align:left"><code>output_path</code></td>
+<td style="text-align:left">必填</td>
+<td style="text-align:left">拟合生成的精简圆弧 DXF 轮廓或 NC 代码保存路径</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="3-算法特性与数控优势">3. 算法特性与数控优势</h2>
+<h3 id="31-numba-jit-高性能双向公差带拟合">3.1 Numba JIT 高性能双向公差带拟合</h3>
+<p>软件底层集成由 Numba 预编译的高性能几何拟合内核（<code>calc.py</code>）：</p>
+<ul>
+<li><strong>自适应贪婪合并</strong>：从基准点出发，向后动态扩展测点区间，通过最小二乘法实时求取局部最佳拟合圆心与半径；</li>
+<li><strong>极值残差拦截</strong>：只要当前段内任何单个测点到拟合圆弧的径向法向距离超过给定的“拟合误差”，立即截断当前圆弧，平滑开启下一段圆弧的搜索与求解；</li>
+<li><strong>一阶切向平滑衔接</strong>：在圆弧与圆弧、圆弧与直线的过渡节点，强制执行切向斜率约束，消除拐点折角。</li>
+</ul>
+<h3 id="32-离散点-vs-圆弧拟合性能对比">3.2 离散点 vs 圆弧拟合性能对比</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标维度</th>
+<th style="text-align:left">密集离散短线段（G01）</th>
+<th style="text-align:left">智能拟合圆弧（G02/G03）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>程序代码行数</strong></td>
+<td style="text-align:left">3,600 ~ 10,000 行冗长代码</td>
+<td style="text-align:left"><strong>仅需 40 ~ 80 行圆弧指令</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>程序文件体积</strong></td>
+<td style="text-align:left">几百 KB ~ 数 MB</td>
+<td style="text-align:left"><strong>小于 10 KB（压缩率达 90% 以上）</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>数控前瞻处理速度</strong></td>
+<td style="text-align:left">易引发插补缓冲区欠刀降速</td>
+<td style="text-align:left">数控系统前瞻极度轻松，运行高速流畅</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>工件表面微观光洁度</strong></td>
+<td style="text-align:left">存在微观多边形多面棱面折线</td>
+<td style="text-align:left"><strong>理论曲率连续圆润，达到镜面磨削效果</strong></td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="4-操作与成果验证">4. 操作与成果验证</h2>
+<ol>
+<li>导入待拟合的 DXF 文件，设置拟合误差为 <code>1.0</code>；</li>
+<li>指定保存路径，点击 <strong>生成拟合数据</strong>；</li>
+<li>生成完毕后，可配合 <strong><a href="dxf_compare.html">DXF 文件对比</a></strong> 工具，将原始离散 DXF 与拟合后的圆弧 DXF 叠加比对，并在高倍放大下核验关键拐点区域的贴合度。</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dxf_discretization.html" class="navigation navigation-prev " aria-label="Previous page: 6.3 DXF 离散化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../7_parts_library/" class="navigation navigation-next " aria-label="Next page: 7. 零件库与配置管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4 DXF 拟合圆弧","level":"1.7.4","depth":2,"next":{"title":"7. 零件库与配置管理","level":"1.8","depth":1,"path":"7_parts_library/README.md","ref":"7_parts_library/README.md","articles":[{"title":"7.1 零件库操作指南","level":"1.8.1","depth":2,"path":"7_parts_library/README.md","ref":"7_parts_library/README.md","articles":[]}]},"previous":{"title":"6.3 DXF 离散化","level":"1.7.3","depth":2,"path":"6_toolbox_dxf/dxf_discretization.md","ref":"6_toolbox_dxf/dxf_discretization.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"凸轮磨削软件 (Cam Grinding v1.29.0) 完整用户指南与工程实战手册"},"file":{"path":"6_toolbox_dxf/dxf_fit_arc.md","mtime":"2026-11-06T03:19:41.190Z","type":"markdown"},"gitbook":{"version":"6.2.5","time":"2026-11-06T03:19:48.834Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1050 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>2.5 西门子 SINUMERIK 机床配置 · Cam Grinding User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.2.5">
+        <meta name="author" content="Nie Kun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../3_cam_drawing/" />
+    
+    
+    <link rel="prev" href="output_and_plots.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    软件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1. 快速开始与界面总览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_getting_started/">
+            
+                <a href="../1_getting_started/">
+            
+                    
+                    1.1 系统要求与安装启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_getting_started/auth_and_update.html">
+            
+                <a href="../1_getting_started/auth_and_update.html">
+            
+                    
+                    1.2 授权激活与版本升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_getting_started/ui_overview.html">
+            
+                <a href="../1_getting_started/ui_overview.html">
+            
+                    
+                    1.3 界面布局与菜单栏导览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_getting_started/quick_workflow.html">
+            
+                <a href="../1_getting_started/quick_workflow.html">
+            
+                    
+                    1.4 五分钟快速上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. 数控加工代码生成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.1 代码生成流程概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="basic_params.html">
+            
+                <a href="basic_params.html">
+            
+                    
+                    2.2 基本参数配置详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="advanced_params.html">
+            
+                <a href="advanced_params.html">
+            
+                    
+                    2.3 高级参数与算法配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="output_and_plots.html">
+            
+                <a href="output_and_plots.html">
+            
+                    
+                    2.4 输出文件与交互图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="sinumerik_transmit.html">
+            
+                <a href="sinumerik_transmit.html">
+            
+                    
+                    2.5 西门子 SINUMERIK 机床配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_cam_drawing/">
+            
+                <a href="../3_cam_drawing/">
+            
+                    
+                    3. 绘图参数建模
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_cam_drawing/">
+            
+                <a href="../3_cam_drawing/">
+            
+                    
+                    3.1 绘图参数模块总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_cam_drawing/xy_points.html">
+            
+                <a href="../3_cam_drawing/xy_points.html">
+            
+                    
+                    3.2 XY 点位文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_cam_drawing/cam_data_file.html">
+            
+                <a href="../3_cam_drawing/cam_data_file.html">
+            
+                    
+                    3.3 CAM 数据文件建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_cam_drawing/cam_transform.html">
+            
+                <a href="../3_cam_drawing/cam_transform.html">
+            
+                    
+                    3.4 CAM 图形变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3_cam_drawing/cam_conjugate.html">
+            
+                <a href="../3_cam_drawing/cam_conjugate.html">
+            
+                    
+                    3.5 CAM 共轭计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4. 工具箱：凸轮分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_toolbox_analysis/">
+            
+                <a href="../4_toolbox_analysis/">
+            
+                    
+                    4.1 凸轮分析体系概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_toolbox_analysis/cam_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/cam_to_lift.html">
+            
+                    
+                    4.2 凸轮转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_toolbox_analysis/lift_to_cam.html">
+            
+                <a href="../4_toolbox_analysis/lift_to_cam.html">
+            
+                    
+                    4.3 升程转凸轮曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                <a href="../4_toolbox_analysis/velocity_to_lift.html">
+            
+                    
+                    4.4 速度转升程曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_toolbox_analysis/curve_to_formula.html">
+            
+                <a href="../4_toolbox_analysis/curve_to_formula.html">
+            
+                    
+                    4.5 曲线转公式方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5. 工具箱：加工误差
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolbox_error/">
+            
+                <a href="../5_toolbox_error/">
+            
+                    
+                    5.1 误差诊断与补偿概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolbox_error/error_correction.html">
+            
+                <a href="../5_toolbox_error/error_correction.html">
+            
+                    
+                    5.2 加工误差修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolbox_error/diameter_error_analysis.html">
+            
+                <a href="../5_toolbox_error/diameter_error_analysis.html">
+            
+                    
+                    5.3 直径误差分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolbox_error/cam_error_superposition.html">
+            
+                <a href="../5_toolbox_error/cam_error_superposition.html">
+            
+                    
+                    5.4 CAM 误差叠加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolbox_error/cam_error_comparison.html">
+            
+                <a href="../5_toolbox_error/cam_error_comparison.html">
+            
+                    
+                    5.5 CAM 误差对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6_toolbox_dxf/">
+            
+                <a href="../6_toolbox_dxf/">
+            
+                    
+                    6. 工具箱：DXF 处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6_toolbox_dxf/">
+            
+                <a href="../6_toolbox_dxf/">
+            
+                    
+                    6.1 DXF 处理工具概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6_toolbox_dxf/dxf_compare.html">
+            
+                <a href="../6_toolbox_dxf/dxf_compare.html">
+            
+                    
+                    6.2 DXF 文件对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6_toolbox_dxf/dxf_discretization.html">
+            
+                <a href="../6_toolbox_dxf/dxf_discretization.html">
+            
+                    
+                    6.3 DXF 离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6_toolbox_dxf/dxf_fit_arc.html">
+            
+                <a href="../6_toolbox_dxf/dxf_fit_arc.html">
+            
+                    
+                    6.4 DXF 拟合圆弧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7. 零件库与配置管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7_parts_library/">
+            
+                <a href="../7_parts_library/">
+            
+                    
+                    7.1 零件库操作指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8. 典型工程实战案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8_workflows_cases/">
+            
+                <a href="../8_workflows_cases/">
+            
+                    
+                    8.1 实战案例导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                <a href="../8_workflows_cases/case1_conjugate_cam.html">
+            
+                    
+                    8.2 案例一：SK722 高速共轭凸轮设计磨削
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                <a href="../8_workflows_cases/case2_eccentric_cam_table.html">
+            
+                    
+                    8.3 案例二：EC70 偏心轴主副凸轮配对
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                <a href="../8_workflows_cases/case3_large_lift_error_fix.html">
+            
+                    
+                    8.4 案例三：LD3600 大升程凸轮闭环修调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9. 故障排除与报警速查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9_troubleshooting/">
+            
+                <a href="../9_troubleshooting/">
+            
+                    
+                    9.1 校验报警速查与排查指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.5 西门子 SINUMERIK 机床配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="西门子-sinumerik-机床配置">西门子 SINUMERIK 机床配置</h1>
+<p>在数控凸轮磨床上加工非圆轮廓时，数控系统通常通过 <strong>极坐标转换（TRANSMIT）</strong> 或 <strong>多轴联动点位插补</strong> 实现砂轮架进给轴（<code>X</code>）与工件旋转主轴（<code>C</code>）的高动态协同。</p>
+<hr></hr>
+<h2 id="1-transmit-极坐标转换概述">1. TRANSMIT 极坐标转换概述</h2>
+<p><strong>TRANSMIT（Transmit and Cylinder Surface Transformation）</strong> 是西门子 SINUMERIK 系统的高级运动学转换选件：</p>
+<ul>
+<li><strong>核心功能</strong>：将机床的直线进给轴（通常为 <code>X</code> 轴）和回转分度轴（通常为 <code>C</code> 轴）虚拟投影为笛卡尔直角坐标系中的第一与第二几何轴（<code>X-Y</code>）。</li>
+<li><strong>编程优势</strong>：零件轮廓可以直接以图纸笛卡尔坐标（<code>X/Y</code>）配合标准直线（<code>G01</code>）与圆弧（<code>G02/G03</code>）进行插补，由数控内核实时解算非线性逆运动学。</li>
+<li><strong>选件要求</strong>：使用该功能需机床已开通“TRANSMIT 和柱面转换”软件授权选件。</li>
+</ul>
+<pre><code>TRANSMIT        ; 激活第 1 个 TRANSMIT 转换数据组
+TRANSMIT(n)     ; 激活第 n 个 TRANSMIT 转换数据组（每个通道最多支持 2 组）
+TRAFOOF         ; 关闭所有坐标转换，恢复物理机床坐标轴控制
+</code></pre><hr></hr>
+<h2 id="2-机床数据配置体系">2. 机床数据配置体系</h2>
+<p>在西门子 840D / 840D sl / ONE 系统中，启用 TRANSMIT 需按顺序配置通用机床数据、轴数据和通道数据。</p>
+<h3 id="21-通用机床数据（md10000）">2.1 通用机床数据（MD10000）</h3>
+<p>定义数控系统底层物理轴名称：</p>
+<pre><code class="lang-ini"><span class="hljs-comment">; 物理机床轴定义</span>
+MD10000<span class="hljs-section">[0]</span> MN_AXCONF_MACHAX_NAME_TAB<span class="hljs-section">[0]</span> = "X1"  <span class="hljs-comment">; 垂直于工件回转轴的砂轮进给直线轴</span>
+MD10000<span class="hljs-section">[1]</span> MN_AXCONF_MACHAX_NAME_TAB<span class="hljs-section">[1]</span> = "Z1"  <span class="hljs-comment">; 平行于工件回转轴的轴向移动直线轴</span>
+MD10000<span class="hljs-section">[2]</span> MN_AXCONF_MACHAX_NAME_TAB<span class="hljs-section">[2]</span> = "C1"  <span class="hljs-comment">; 工件头架高精度回转主轴</span>
+MD10000<span class="hljs-section">[3]</span> MN_AXCONF_MACHAX_NAME_TAB<span class="hljs-section">[3]</span> = "V1"  <span class="hljs-comment">; 砂轮修整器进给轴（可选）</span>
+MD10000<span class="hljs-section">[4]</span> MN_AXCONF_MACHAX_NAME_TAB<span class="hljs-section">[4]</span> = "W1"  <span class="hljs-comment">; 砂轮修整器横移轴（可选）</span>
+</code></pre>
+<h3 id="22-回转轴专用数据（md30000-系列）">2.2 回转轴专用数据（MD30000 系列）</h3>
+<p>确保工件头架 <code>C</code> 轴作为旋转模态轴正确运行：</p>
+<pre><code class="lang-ini">MD30300 MA_IS_ROT_AX<span class="hljs-section">[2]</span> = 1        <span class="hljs-comment">; 设置第 3 轴（C1）为旋转轴</span>
+MD30310 MA_ROT_IS_MODULO<span class="hljs-section">[2]</span> = 1    <span class="hljs-comment">; 启用模态回转分度（0° ~ 360° 循环）</span>
+MD30320 MA_DISPLAY_IS_MODULO<span class="hljs-section">[2]</span> = 1 <span class="hljs-comment">; 界面模态显示角度</span>
+</code></pre>
+<h3 id="23-通道机床数据（md20000-系列）">2.3 通道机床数据（MD20000 系列）</h3>
+<p>绑定通道轴并定义几何轴分配：</p>
+<pre><code class="lang-ini"><span class="hljs-comment">; 1. 通道轴名称定义（不可与机床物理轴重名）</span>
+MD20080<span class="hljs-section">[0]</span> MC_AXCONF_CHANAX_NAME_TAB<span class="hljs-section">[0]</span> = "X"
+MD20080<span class="hljs-section">[1]</span> MC_AXCONF_CHANAX_NAME_TAB<span class="hljs-section">[1]</span> = "Z"
+MD20080<span class="hljs-section">[2]</span> MC_AXCONF_CHANAX_NAME_TAB<span class="hljs-section">[2]</span> = "C"
+
+<span class="hljs-comment">; 2. 通道轴与机床物理轴编号绑定（1:X1, 2:Z1, 3:C1）</span>
+MD20070<span class="hljs-section">[0]</span> MC_AXCONF_MACHAX_USED<span class="hljs-section">[0]</span> = 1
+MD20070<span class="hljs-section">[1]</span> MC_AXCONF_MACHAX_USED<span class="hljs-section">[1]</span> = 2
+MD20070<span class="hljs-section">[2]</span> MC_AXCONF_MACHAX_USED<span class="hljs-section">[2]</span> = 3
+
+<span class="hljs-comment">; 3. 几何轴名称定义</span>
+MD20060<span class="hljs-section">[0]</span> MC_AXCONF_GEOAX_NAME_TAB<span class="hljs-section">[0]</span> = "X"
+MD20060<span class="hljs-section">[1]</span> MC_AXCONF_GEOAX_NAME_TAB<span class="hljs-section">[1]</span> = "Y"  <span class="hljs-comment">; 虚拟几何轴</span>
+MD20060<span class="hljs-section">[2]</span> MC_AXCONF_GEOAX_NAME_TAB<span class="hljs-section">[2]</span> = "Z"
+
+<span class="hljs-comment">; 4. 未激活 TRANSMIT 时的几何轴映射（通道轴 1-&gt;X, 2-&gt;Z）</span>
+MD20050<span class="hljs-section">[0]</span> MC_AXCONF_GEOAX_ASSIGN_TAB<span class="hljs-section">[0]</span> = 1
+MD20050<span class="hljs-section">[1]</span> MC_AXCONF_GEOAX_ASSIGN_TAB<span class="hljs-section">[0]</span> = 0  <span class="hljs-comment">; 不分配通道轴</span>
+MD20050<span class="hljs-section">[2]</span> MC_AXCONF_GEOAX_ASSIGN_TAB<span class="hljs-section">[2]</span> = 2
+</code></pre>
+<h3 id="24-transmit-转换数据组配置（md24100-系列）">2.4 TRANSMIT 转换数据组配置（MD24100 系列）</h3>
+<p>激活转换后，数控系统将虚拟出平面 <code>Y</code> 轴与 <code>X</code> 轴联动：</p>
+<pre><code class="lang-ini">MD24100 <span class="hljs-attr">MC_TRAFO_TYPE_1</span> = <span class="hljs-number">256</span>              <span class="hljs-comment">; 256 表示 1 根回转轴 + 1 根直线轴转换</span>
+MD24110<span class="hljs-section">[0]</span> MC_TRAFO_AXES_IN_1<span class="hljs-section">[0]</span> = 1       <span class="hljs-comment">; 垂直于回转轴的直线轴（通道轴 1: X）</span>
+MD24110<span class="hljs-section">[1]</span> MC_TRAFO_AXES_IN_1<span class="hljs-section">[1]</span> = 3       <span class="hljs-comment">; 回转轴（通道轴 3: C）</span>
+MD24110<span class="hljs-section">[2]</span> MC_TRAFO_AXES_IN_1<span class="hljs-section">[2]</span> = 2       <span class="hljs-comment">; 平行于回转轴的直线轴（通道轴 2: Z）</span>
+
+MD24120<span class="hljs-section">[0]</span> MC_TRAFO_GEOAX_ASSIGN_TAB_1<span class="hljs-section">[0]</span> = 1 <span class="hljs-comment">; 几何轴 X 分配给通道轴 1</span>
+MD24120<span class="hljs-section">[1]</span> MC_TRAFO_GEOAX_ASSIGN_TAB_1<span class="hljs-section">[1]</span> = 3 <span class="hljs-comment">; 几何轴 Y 由通道轴 3（C轴）解算生成</span>
+MD24120<span class="hljs-section">[2]</span> MC_TRAFO_GEOAX_ASSIGN_TAB_1<span class="hljs-section">[2]</span> = 2 <span class="hljs-comment">; 几何轴 Z 分配给通道轴 2</span>
+</code></pre>
+<hr></hr>
+<h2 id="3-关键注意事项：零点偏移与动态重构">3. 关键注意事项：零点偏移与动态重构</h2>
+<blockquote>
+<p>[!WARNING]
+<strong>TRANSMIT 激活状态下的零点偏移抑制</strong></p>
+<p><code>TRANSMIT</code> 启动后系统自动运行在 <code>G53</code> 状态下，系统会<strong>强制抑制可设定零点偏移（G54~G59）与可编程零点偏移（TRANS/ATRANS）</strong>。
+若直接在加工代码中使用 <code>G54</code> 或 <code>TRANS</code>，其位移将被忽略或引发轨迹异常。</p>
+</blockquote>
+<p>要在 TRANSMIT 模式下实现工件对刀偏移与角度基准相位调整，必须通过专用转换机床数据进行设定：</p>
+<ol>
+<li><strong>回转轴相位偏置</strong>：<code>MC_TRANSMIT_ROT_AX_OFFSET_n</code>（参数 MD24900）</li>
+<li><strong>直线轴刀具偏置</strong>：<code>MC_TRANSMIT_BASE_TOOL_n</code>（参数 MD24920）</li>
+<li><strong>动态生效机制</strong>：上述参数具有 <code>cf</code>（Confirm）属性。若在 NC 程序中动态赋值，<strong>必须紧跟执行 <code>NEWCONF</code> 指令</strong>重载生效。</li>
+</ol>
+<pre><code class="lang-ini"><span class="hljs-comment">; TRANSMIT 动态轴偏置参数定义</span>
+MD24900 <span class="hljs-attr">MC_TRANSMIT_ROT_AX_OFFSET_1</span> = <span class="hljs-number">60.0</span>    <span class="hljs-comment">; 数据组 1 回转轴偏移到 60 度处</span>
+MD24920<span class="hljs-section">[0]</span> MC_TRANSMIT_BASE_TOOL_1<span class="hljs-section">[0]</span> = -10.0 <span class="hljs-comment">; 数据组 1 第一几何轴偏移到 -10mm 处</span>
+MD24920<span class="hljs-section">[1]</span> MC_TRANSMIT_BASE_TOOL_1<span class="hljs-section">[1]</span> = 0.0
+MD24920<span class="hljs-section">[2]</span> MC_TRANSMIT_BASE_TOOL_1<span class="hljs-section">[2]</span> = 0.0
+</code></pre>
+<hr></hr>
+<h2 id="4-高速高精磨削插补控制指令">4. 高速高精磨削插补控制指令</h2>
+<p>为了保证凸轮外圆轮廓的光顺性、消除机床换向冲击并抑制多边形振纹，推荐在数控代码开头启用西门子先进样条与前瞻控制指令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">控制指令</th>
+<th style="text-align:left">功能说明</th>
+<th style="text-align:left">推荐设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>COMPCAD</code></td>
+<td style="text-align:left">启用高级 CAD 表面压缩器，将短线段重构为光滑多项式样条</td>
+<td style="text-align:left">凸轮精磨必备</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>FFWON</code></td>
+<td style="text-align:left">启用速度/加速度前馈控制，大幅减小跟踪滞后误差</td>
+<td style="text-align:left">开启</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SOFT</code></td>
+<td style="text-align:left">采用 S 型加速度（Jerk 柔性加减速控制），避免突变冲击</td>
+<td style="text-align:left">开启</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>FIFOCTRL</code></td>
+<td style="text-align:left">开启插补缓冲区预读优化，防止高速加工中欠刀断流</td>
+<td style="text-align:left">推荐开启</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>CYCLE832(0.001, 1)</code></td>
+<td style="text-align:left">调用高速加工循环，设定精加工轮廓公差为 0.001 mm</td>
+<td style="text-align:left">精磨段调用</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="5-标准加工程序结构范例">5. 标准加工程序结构范例</h2>
+<p>以下为 <strong>Cam Grinding</strong> 配套输出的西门子标准精磨程序框架：</p>
+<pre><code class="lang-gcode"><span class="hljs-comment">; ====================================================================</span>
+<span class="hljs-comment">; PROGRAM: CAM_GRIND_FINISH.MPF</span>
+<span class="hljs-comment">; PIECE: SK722-CAM-01</span>
+<span class="hljs-comment">; DATE: 2026-11-06</span>
+<span class="hljs-comment">; ====================================================================</span>
+<span class="hljs-title function_">G90</span> <span class="hljs-title function_">G17</span> <span class="hljs-title function_">G710</span> <span class="hljs-title function_">G94</span>          <span class="hljs-comment">; 绝对坐标, XY 平面, 公制尺寸, 每分钟进给</span>
+<span class="hljs-title function_">G500</span>                      <span class="hljs-comment">; 取消基础坐标偏置</span>
+
+<span class="hljs-comment">; 1. 运动到安全换刀与进给起始点</span>
+<span class="hljs-title function_">G00</span> <span class="hljs-property">X150.000</span> <span class="hljs-property">Z20.000</span> <span class="hljs-property">C0.000</span>
+
+<span class="hljs-comment">; 2. 动态设置 TRANSMIT 旋转与基础偏置</span>
+MC_TRANSMIT_BASE_TOOL_1[<span class="hljs-number">0</span>] = <span class="hljs-number">-12.500</span>   <span class="hljs-comment">; X 轴刀具基础偏置</span>
+MC_TRANSMIT_ROT_AX_OFFSET_1 = <span class="hljs-number">45.000</span>   <span class="hljs-comment">; 凸轮基准相位偏移 45 度</span>
+NEWCONF                                <span class="hljs-comment">; 动态激活机床数据</span>
+
+<span class="hljs-comment">; 3. 激活高速高精运动控制</span>
+SOFT
+FFWON
+COMPCAD
+CYCLE832<span class="hljs-comment">(0.001, 1)</span>                     <span class="hljs-comment">; 精加工公差 0.001mm</span>
+
+<span class="hljs-comment">; 4. 激活 TRANSMIT 坐标转换</span>
+TRANSMIT
+
+<span class="hljs-comment">; 5. 快速定位至逼近切入点</span>
+<span class="hljs-title function_">G00</span> X=<span class="hljs-number">35.0000</span> Y=<span class="hljs-number">0.0000</span> Z=<span class="hljs-number">-5.000</span>
+<span class="hljs-title function_">G01</span> <span class="hljs-title function_">G41</span> X=<span class="hljs-number">30.0000</span> Y=<span class="hljs-number">0.0000</span> <span class="hljs-params">F800</span>
+
+<span class="hljs-comment">; 6. 轮廓圆弧与直线插补磨削段</span>
+<span class="hljs-title function_">G01</span> X=<span class="hljs-number">28.5000</span> Y=<span class="hljs-number">0.0000</span> <span class="hljs-params">F150</span>
+<span class="hljs-title function_">G02</span> X=<span class="hljs-number">18.4215</span> Y=<span class="hljs-number">-12.3340</span> CR=<span class="hljs-number">32.450</span>
+<span class="hljs-title function_">G01</span> X=<span class="hljs-number">12.1104</span> Y=<span class="hljs-number">-18.6651</span>
+<span class="hljs-title function_">G02</span> X=<span class="hljs-number">-15.3421</span> Y=<span class="hljs-number">-10.2231</span> CR=<span class="hljs-number">24.120</span>
+<span class="hljs-title function_">G02</span> X=<span class="hljs-number">-25.0000</span> Y=<span class="hljs-number">0.0000</span> CR=<span class="hljs-number">18.500</span>
+<span class="hljs-comment">; ... [后续轮廓数据由软件自动生成] ...</span>
+
+<span class="hljs-comment">; 7. 退刀与关闭转换</span>
+<span class="hljs-title function_">G40</span> <span class="hljs-title function_">G01</span> X=<span class="hljs-number">35.0000</span> Y=<span class="hljs-number">0.0000</span> <span class="hljs-params">F1000</span>
+TRAFOOF                                <span class="hljs-comment">; 关闭 TRANSMIT 转换</span>
+
+<span class="hljs-comment">; 8. 复位与程序结束</span>
+<span class="hljs-title function_">G00</span> <span class="hljs-property">X150.000</span> <span class="hljs-property">Z50.000</span>
+<span class="hljs-title function_">M30</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="output_and_plots.html" class="navigation navigation-prev " aria-label="Previous page: 2.4 输出文件与交互图表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../3_cam_drawing/" class="navigation navigation-next " aria-label="Next page: 3. 绘图参数建模">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.5 西门子 SINUMERIK 机床配置","level":"1.3.5","depth":2,"next":{"title":"3. 绘图参数建模","level":"1.4","depth":1,"path":"3_cam_drawing/README.md","ref":"3_cam_drawing/README.md","articles":[{"title":"3.1 绘图参数模块总览","level":"1.4.1","depth":2,"path":"3_cam_drawing/README.md","ref":"3_cam_drawing/README.md","articles":[]},{"title":"3.2 XY 点位文件建模","level":"1.4.2","depth":2,"path":"3_cam_drawing/xy_points.md","ref":"3_cam_drawing/xy_points.md","articles":[]},{"title":"3.3 CAM 数据文件建模","level":"1.4.3","depth":2,"path":"3_cam_drawing/cam_data_file.md","ref":"3_cam_drawing/cam_data_file.md","articles":[]},{"title":"3.4 CAM 图形变换","level":"1.4.4","depth":2,"path":"3_cam_drawing/cam_transform.md","ref":"3_cam_drawing/cam_transform.md","articles":[]},{"title":"3.5 CAM 共轭计算","level":"1.4.5","depth":2,"path":"3_cam_drawing/cam_conjugate.md","ref":"3_cam_drawing/cam_conjugate.md","articles":[]}]},"previous":{"title":"2.4 输出文件与交互图表","level":"1.3.4","depth":2,"path":"2_code_generation/output_and_plots.md","ref":"2_code_generation/output_and_plots.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Nie Kun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Cam Grinding User Guide","language":"zh-hans","gitbook":"*","description":"凸轮磨削软件 (Cam Grinding v1.29.0) 完整用户指南与工程实战手册"},"file":{"path":"2_code_generation/sinumerik_transmit.md","mtime":"2026-11-06T03:19:41.183Z","type":"markdown"},"gitbook":{"version":"6.2.5","time":"2026-11-06T03:19:48.834Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
