@@ -1,10 +1,11 @@
 {
     "title": "Cam Grinding User Guide",
     "author": "Nie Kun",
-    "description": "Cam Grinding 软件完整用户指南",
+    "description": "凸轮磨削软件 (Cam Grinding v1.29.0) 完整用户指南与工程实战手册",
     "language": "zh-hans",
     "plugins": [
-        "theme-default"
+        "theme-default",
+        "katex"
     ],
     "pluginsConfig": {
         "theme-default": {

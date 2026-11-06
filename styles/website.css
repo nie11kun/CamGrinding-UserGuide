@@ -34,6 +34,9 @@ html, body {
     font-family: var(--base-font) !important;
     font-size: 16px;
     line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* 段落字体设置 */
@@ -78,27 +81,20 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* 内容区域优化 */
-.markdown-section {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* 段落优化 */
 .markdown-section p {
-    margin: 1.2em 0;
+    margin: 1.0em 0;
     text-align: justify;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.015em;
     word-break: break-word;
     overflow-wrap: break-word;
 }
 
 /* 标题优化 */
-.markdown-section h1 { font-size: 2em; }
-.markdown-section h2 { font-size: 1.6em; padding-bottom: 0.3em; }
-.markdown-section h3 { font-size: 1.3em; }
-.markdown-section h4 { font-size: 1.15em; }
+.markdown-section h1 { font-size: 2em; border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+.markdown-section h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #eaecef; margin-top: 1.8em; }
+.markdown-section h3 { font-size: 1.25em; margin-top: 1.4em; color: #1f4e79; }
+.markdown-section h4 { font-size: 1.1em; }
 
 /* 代码块优化 */
 .markdown-section pre {
@@ -107,28 +103,80 @@ body {
     overflow-x: auto;
     line-height: 1.5;
     position: relative;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
 }
 
 .markdown-section code {
     padding: 0.2em 0.4em;
     border-radius: 3px;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* 图片优化：居中、轻微圆角与边框阴影，清晰展示工程实景图 */
+.markdown-section img {
+    display: block;
+    margin: 1.2em auto;
+    max-width: 96%;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 表格优化 */
+.markdown-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 15px;
+}
+
+.markdown-section table th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid #cbd5e1;
+    padding: 9px 12px;
+}
+
+.markdown-section table td {
+    vertical-align: top;
+    line-height: 1.6;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+}
+
+.markdown-section table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* 引用块与提示框优化 */
+.markdown-section blockquote {
+    border-left: 4px solid #2563eb;
+    background-color: #f0f7ff;
+    padding: 10px 16px;
+    color: #1e293b;
+    border-radius: 0 6px 6px 0;
+    margin: 1.2em 0;
 }
 
 /* 侧边栏优化 */
 .book-summary {
-    border-right: 1px solid;
+    border-right: 1px solid #e2e8f0;
 }
 
 /* 列表优化 */
 .markdown-section ul,
 .markdown-section ol {
-    padding-left: 2em;
-    margin: 1em 0;
+    padding-left: 1.8em;
+    margin: 0.8em 0;
 }
 
 .markdown-section ul li,
 .markdown-section ol li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
+    line-height: 1.65;
 }
 
 /* 响应式优化 */
