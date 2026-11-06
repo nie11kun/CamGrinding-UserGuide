@@ -130,6 +130,14 @@ def render_dxf(dxf_path, rel_out_path, title="", figsize=(10, 8), dpi=160):
     return True
 
 def main():
+    try:
+        from tools.generate_case_plots import plot_case1_conjugate, plot_case2_eccentric, plot_case3_error_fixed
+        print("Rendering chapter 8 case figures...")
+        plot_case1_conjugate()
+        plot_case2_eccentric()
+        plot_case3_error_fixed()
+    except Exception as e:
+        print(f"Warning: could not render case plots: {e}")
     print("build_images.py ready. All assets generated successfully in chapter resources.")
 
 if __name__ == "__main__":
